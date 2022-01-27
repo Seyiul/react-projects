@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        
+        function MinutesToHours(){
+            const [amount, setAmount] = React.useState()
+            const [flipped, setFlipped] = React.useState(false)
+            const onChange = (event) => {
+                setAmount(event.target.value);
+            }
+            const reset = () => setAmount(0);
+            const onFlip = () => {
+                reset()
+                setFlipped((current) => !current);}
+            return(
+            <div>
+                <div id="inputWrap">
+                    <label htmlFor="minutes">Minutes</label>
+                    <input value={flipped ? amount * 60 : amount} id="minutes" placeholder="Minutes" type="number" onChange={onChange} disabled = {flipped}/>
+                </div>
+                <div id="inputWrap">
+                    <label htmlFor="hours">Hours</label>
+                    <input value={flipped ? amount : Math.round(amount/60)} id="hours" placeholder="Hours" type="number"
+                    onChange={onChange} disabled = {!flipped} />
+                </div>
+                <div id="btnWrap">
+                    <button onClick={reset}>RESET</button>
+                    <button onClick={onFlip}>FLIP</button>
+                </div>
+            </div>
+            )
+        };
+        function KmToMiles(){
+            const [amount, setAmount] = React.useState()
+            const [flipped, setFlipped] = React.useState(false)
+            const onChange = (event) => {
+                setAmount(event.target.value);
+            }
+            const reset = () => {setAmount(0)}
+            const onFlip  = () => {
+                reset()
+                setFlipped((current) => !current);
+            }
+            return(
+            <div>
+                <div id="inputWrap">
+                    <label htmlFor="km">KiloMeters</label>
+                    <input value={flipped ? amount / 0.621371: amount} id="km" placeholder="Kilometers" type="number" onChange={onChange} disabled={flipped}/>
+                </div>
+                <div id="inputWrap">
+                    <label htmlFor="mile">Miles</label>
+                    <input value={flipped ? amount : amount * 0.621371} id="mile" placeholder="miles" type="number" onChange={onChange} disabled={!flipped}/>
+                </div>
+                <div id="btnWrap">
+                    <button onClick={reset}>RESET</button>
+                    <button onClick={onFlip}>FLIP</button>
+                </div>
+            </div>
+            
+            );
+        };
+        function App(){
+            const [index,setIndex] = React.useState("xx")
+            const onSelect = (event) =>{
+                setIndex(event.target.value)
+            }
+            return(
+                <div>
+                    <h2>Super Converter</h2>
+                    <select value={index} onChange={onSelect}>
+                        <option value="xx">Select your units</option>
+                        <option value="0">Minutes & Hours </option>
+                        <option value="1">Km & Miles </option>
+                    </select>
+
+                    <hr/>
+                    {index === "xx" ? "Please Select Your Units" :null} 
+                    {index === "0" ? <MinutesToHours /> : null}
+                    {index === "1" ? <KmToMiles /> : null}
+                </div>
+            )
+        };
+
+        const root = document.getElementById("root")
+        ReactDOM.render(<App />, root);
+    </script>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    h2{
+        font-family: 'Press Start 2P', cursive;
+    }
+    #root{
+        display: flex;
+        justify-content: center;
+    }
+    #inputWrap{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    #btnWrap{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    #btnWrap button{
+        margin-right: 10px;
+        border: none;
+    }
+</style>
