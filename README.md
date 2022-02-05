@@ -8,3 +8,4 @@
 |3|example for studying React-propType|[link](https://github.com/Seyiul/simple-react-examples/blob/main/PropType-example.html)|
 |4|example for studying React-useEffect|[link](https://github.com/Seyiul/simple-react-examples/blob/main/example-for-useEffect)|
 |5|To Do List|[link](https://github.com/Seyiul/simple-react-examples/blob/main/to-do-list)|
+|5|Coin Tracker|[link](https://github.com/Seyiul/simple-react-examples/blob/main/coin-tracker)|
