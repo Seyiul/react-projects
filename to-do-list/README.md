@@ -2,6 +2,10 @@
 
 The simple To Do List
 
+## function
+- toDo List 목록 추가
+- ToDo List 삭제 
+
 <p align="center">
   <img src ="https://user-images.githubusercontent.com/63714074/152641594-8988fd4d-0016-4bfc-8960-559737f3fef3.png">
 </p>
