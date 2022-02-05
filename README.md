@@ -1,4 +1,4 @@
-# simple-react-examples
+# simple-react-projects
 - Develop the simple examples for studying React
 
 |N0.|Description|link|
