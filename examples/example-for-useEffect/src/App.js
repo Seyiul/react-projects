@@ -6,12 +6,12 @@ function Hello() {
   //   console.log("created :)");
   //   return () => console.log("destroyed :(");
   // }, []);
-  function byeFn() {
+  function byFn() {
     console.log("bye :(");
   }
   function hiFn() {
     console.log("created :)");
-    return byeFn;
+    return byFn;
   }
   useEffect(hiFn, []);
   return <h1>Hello</h1>;
