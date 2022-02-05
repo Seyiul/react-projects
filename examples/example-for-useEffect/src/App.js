@@ -3,7 +3,6 @@ function App() {
   const [counter, setValue] = useState(0);
   const [keyword, setKeyword] = useState("");
   const onClick = () => setValue((prev) => prev + 1);
-  console.log("i run all the time");
   const onChange = (event) => {
     setKeyword(event.target.value);
   };
