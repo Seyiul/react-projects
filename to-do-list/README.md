@@ -1,9 +1,9 @@
 # Description
 
-This project fatches the types and prices of cryptocurrency from coinpaprika API and It helps convert dollars and cryptocurrency.
+The simple To Do List
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/63714074/152641414-ac1fe1b4-edd2-46ea-9353-4c78eec31999.png"/>
+  <img src ="https://user-images.githubusercontent.com/63714074/152641594-8988fd4d-0016-4bfc-8960-559737f3fef3.png">
 </p>
 
 # Getting Started with Create React App
