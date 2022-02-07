@@ -14,7 +14,9 @@ function Movie({ id, coverImg, title, summary, genres }) {
           <p key={g}>{g}</p>
         ))}
       </div>
-      <p className={styles.summary}>{summary}</p>
+      <p className={styles.summary}>
+        {summary.length > 235 ? `${summary.slice(0, 235)} ...` : summary}
+      </p>
       <hr />
     </div>
   );
