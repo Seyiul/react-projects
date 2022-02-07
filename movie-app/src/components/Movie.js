@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import styles from "../styles/Movie.module.css";
+
 function Movie({ id, coverImg, title, summary, genres }) {
   return (
     <div>
@@ -7,12 +9,13 @@ function Movie({ id, coverImg, title, summary, genres }) {
       <h2>
         <Link to={`/movie/${id}`}>{title}</Link>
       </h2>
-      <p>{summary}</p>
-      <ul>
+      <div className={styles.genres}>
         {genres.map((g) => (
-          <li key={g}>{g}</li>
+          <p key={g}>{g}</p>
         ))}
-      </ul>
+      </div>
+      <p className={styles.summary}>{summary}</p>
+      <hr />
     </div>
   );
 }

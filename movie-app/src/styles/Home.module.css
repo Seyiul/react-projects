@@ -1,0 +1,17 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.search input {
+  margin-right: 10px;
+  border-radius: 10px;
+  height: 20px;
+  width: 50%;
+}
+
+.search input:focus {
+  background-color: #f1c40f;
+  color: white;
+}

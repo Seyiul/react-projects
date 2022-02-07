@@ -8,9 +8,7 @@ function App() {
         <Route path="/movie/:id">
           <Detail />
         </Route>
-        `
         <Route path="/">
-          `
           <Home />
         </Route>
       </Switch>
