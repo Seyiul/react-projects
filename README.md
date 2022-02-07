@@ -4,7 +4,7 @@
 <hr />
 
 ## Movie App
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/63714074/152785069-5e1ce9cc-ad12-409b-86bb-76b2b195c37c.gif)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/63714074/152788739-bdaa286c-a751-4580-b0ad-c47a63259001.gif)
 
 [Demo](https://seyiul.github.io/react-projects/)
 
