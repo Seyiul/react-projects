@@ -18,7 +18,9 @@ function Detail() {
   return (
     <div className={styles.container}>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className={styles.loading}>
+          <h1>Loading...</h1>
+        </div>
       ) : (
         <div>
           <div className={styles.bgimg}>
@@ -35,7 +37,7 @@ function Detail() {
             <strong>⭐ {movie.rating}</strong>
             <strong>🕒 {movie.runtime} min</strong>
           </div>
-          <p>{movie.description_full}</p>
+          <p className={styles.description}>{movie.description_full}</p>
         </div>
       )}
     </div>
