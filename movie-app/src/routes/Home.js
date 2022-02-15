@@ -26,33 +26,37 @@ function Home() {
         <input value={keyword} onChange={onChange}></input>
         <span>🔎</span>
       </div>
-      {keyword
-        ? movies
-            .filter((searchMovie) =>
-              searchMovie.title
-                .toLowerCase()
-                .includes(keyword.toLocaleLowerCase())
-            )
-            .map((movie) => (
-              <Movie
-                key={movie.id}
-                id={movie.id}
-                coverImg={movie.medium_cover_image}
-                title={movie.title}
-                summary={movie.summary}
-                genres={movie.genres}
-              />
-            ))
-        : movies.map((movie) => (
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              coverImg={movie.medium_cover_image}
-              title={movie.title}
-              summary={movie.summary}
-              genres={movie.genres}
-            />
-          ))}
+      <div className={styles.container}>
+        <div className={styles.movies}>
+          {keyword
+            ? movies
+                .filter((searchMovie) =>
+                  searchMovie.title
+                    .toLowerCase()
+                    .includes(keyword.toLocaleLowerCase())
+                )
+                .map((movie) => (
+                  <Movie
+                    key={movie.id}
+                    id={movie.id}
+                    coverImg={movie.medium_cover_image}
+                    title={movie.title}
+                    summary={movie.summary}
+                    genres={movie.genres}
+                  />
+                ))
+            : movies.map((movie) => (
+                <Movie
+                  key={movie.id}
+                  id={movie.id}
+                  coverImg={movie.medium_cover_image}
+                  title={movie.title}
+                  summary={movie.summary}
+                  genres={movie.genres}
+                />
+              ))}
+        </div>
+      </div>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import styles from "../styles/Movie.module.css";
 
 function Movie({ id, coverImg, title, summary, genres }) {
   return (
-    <div>
+    <div className={styles.container}>
       <img src={coverImg} alt={title} />
       <h2>
         <Link to={`/movie/${id}`}>{title}</Link>
@@ -17,7 +17,6 @@ function Movie({ id, coverImg, title, summary, genres }) {
       <p className={styles.summary}>
         {summary.length > 235 ? `${summary.slice(0, 235)} ...` : summary}
       </p>
-      <hr />
     </div>
   );
 }
